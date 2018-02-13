@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97399B742032C0EA00D62FE2 /* AppDelegate.swift */; };
-		97399B772032C0EA00D62FE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97399B762032C0EA00D62FE2 /* ViewController.swift */; };
 		97399B7C2032C0EA00D62FE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97399B7B2032C0EA00D62FE2 /* Assets.xcassets */; };
 		97399B7F2032C0EA00D62FE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97399B7D2032C0EA00D62FE2 /* LaunchScreen.storyboard */; };
 		9746E4E720338C1F00F651DE /* Ocamon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4E620338C1F00F651DE /* Ocamon.swift */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		97399B712032C0EA00D62FE2 /* Ocadex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocadex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97399B742032C0EA00D62FE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		97399B762032C0EA00D62FE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		97399B7B2032C0EA00D62FE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97399B7E2032C0EA00D62FE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97399B802032C0EA00D62FE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				97399B742032C0EA00D62FE2 /* AppDelegate.swift */,
 				9746E4E620338C1F00F651DE /* Ocamon.swift */,
 				9746E4E820338D9D00F651DE /* OcamonType.swift */,
-				97399B762032C0EA00D62FE2 /* ViewController.swift */,
 				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
 				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
 				97399B7B2032C0EA00D62FE2 /* Assets.xcassets */,
@@ -145,7 +142,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97399B772032C0EA00D62FE2 /* ViewController.swift in Sources */,
 				97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */,
 				9746E4E920338D9D00F651DE /* OcamonType.swift in Sources */,
 				9746E4E720338C1F00F651DE /* Ocamon.swift in Sources */,
