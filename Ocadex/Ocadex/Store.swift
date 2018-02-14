@@ -9,5 +9,7 @@
 import Foundation
 
 struct Store {
-    
+    func loadOcamons() -> [Ocamon] {
+        return []
+    }
 }
