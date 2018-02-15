@@ -1,17 +1,55 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OcamonViewController" customModule="Ocadex" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="jIw-9c-URs"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Det-T1-4uI" userLabel="MainStackView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="11u-R0-q2A">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Olw-VU-oFt">
+                            <rect key="frame" x="0.0" y="323.5" width="375" height="323.5"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="11u-R0-q2A" firstAttribute="leading" secondItem="Det-T1-4uI" secondAttribute="leading" id="1qB-91-ODW"/>
+                        <constraint firstItem="11u-R0-q2A" firstAttribute="height" secondItem="Det-T1-4uI" secondAttribute="height" multiplier="0.5" id="92h-Kc-YZF"/>
+                        <constraint firstItem="Olw-VU-oFt" firstAttribute="leading" secondItem="Det-T1-4uI" secondAttribute="leading" id="9La-yA-opH"/>
+                        <constraint firstItem="11u-R0-q2A" firstAttribute="top" secondItem="Det-T1-4uI" secondAttribute="top" id="IwU-nJ-cwH"/>
+                        <constraint firstAttribute="trailing" secondItem="11u-R0-q2A" secondAttribute="trailing" id="Kvh-ro-q5z"/>
+                        <constraint firstAttribute="trailing" secondItem="Olw-VU-oFt" secondAttribute="trailing" id="NdH-yA-cZt"/>
+                        <constraint firstAttribute="bottom" secondItem="Olw-VU-oFt" secondAttribute="bottom" id="ZK2-PO-enX"/>
+                        <constraint firstItem="Olw-VU-oFt" firstAttribute="height" secondItem="Det-T1-4uI" secondAttribute="height" multiplier="0.5" id="hBt-Ur-fep"/>
+                    </constraints>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Det-T1-4uI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DEJ-bK-qOu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Det-T1-4uI" secondAttribute="bottom" id="G22-H2-JZS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Det-T1-4uI" secondAttribute="trailing" id="WeF-xg-pMW"/>
+                <constraint firstItem="Det-T1-4uI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xog-Cg-EQq"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
