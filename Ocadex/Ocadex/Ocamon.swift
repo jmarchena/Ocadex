@@ -12,5 +12,5 @@ struct Ocamon {
     let name: String
     let type: OcamonType
     let info: String
-    let image: UIImage
+    let image: UIImage?
 }

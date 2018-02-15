@@ -12,17 +12,26 @@ class OcamonsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private var ocamonStore: Store! {
+    private var ocamonStore: Store!
+
+    private var ocamonList: [Ocamon] = [] {
         didSet {
-            ocamonList = ocamonStore.loadOcamons()
+            tableView.reloadData()
         }
     }
 
-    private var ocamonList: [Ocamon] = []
+    static let cellReuseIdentifier: String = "Cell"
 
     init(store: Store) {
         super.init(nibName: nil, bundle: nil)
         self.ocamonStore = store
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: OcamonsViewController.cellReuseIdentifier)
+        ocamonList = ocamonStore.loadOcamons()
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -30,3 +39,21 @@ class OcamonsViewController: UIViewController {
     }
 }
 
+extension OcamonsViewController: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return ocamonList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: OcamonsViewController.cellReuseIdentifier, for: indexPath)
+
+        cell.textLabel?.text = ocamonList[indexPath.row].name
+
+        return cell
+    }
+}

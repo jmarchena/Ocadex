@@ -9,5 +9,5 @@
 import Foundation
 
 enum OcamonType {
-    
+    case soviet
 }
