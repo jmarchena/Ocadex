@@ -37,6 +37,10 @@ class OcamonsViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    private func ocamon(at indexPath: IndexPath) -> Ocamon {
+        return ocamonList[indexPath.row]
+    }
 }
 
 extension OcamonsViewController: UITableViewDataSource {
@@ -55,5 +59,12 @@ extension OcamonsViewController: UITableViewDataSource {
         cell.textLabel?.text = ocamonList[indexPath.row].name
 
         return cell
+    }
+}
+
+extension OcamonsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let ocamonToPush = ocamon(at: indexPath)
+        navigationController?.pushViewController(OcamonViewController(with: ocamonToPush), animated: true)
     }
 }
