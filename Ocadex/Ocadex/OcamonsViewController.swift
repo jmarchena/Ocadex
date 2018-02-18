@@ -25,6 +25,7 @@ class OcamonsViewController: UIViewController {
     init(store: Store) {
         super.init(nibName: nil, bundle: nil)
         self.ocamonStore = store
+        title = "Ocadex"
     }
 
     override func viewDidLoad() {
