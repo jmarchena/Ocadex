@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum OcamonType {
+enum OcamonType: String {
     case soviet
 }
