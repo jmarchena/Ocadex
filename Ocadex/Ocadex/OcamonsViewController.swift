@@ -30,10 +30,8 @@ class OcamonsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.aboutTapped))
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: OcamonsViewController.cellReuseIdentifier)
+        setupNavigationItem()
+        setupTableView()
         ocamonList = ocamonStore.loadOcamons()
     }
 
@@ -41,13 +39,25 @@ class OcamonsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: OcamonsViewController.cellReuseIdentifier)
+    }
+
+    private func setupNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.aboutTapped))
+    }
+
     private func ocamon(at indexPath: IndexPath) -> Ocamon {
         return ocamonList[indexPath.row]
     }
 
     @objc private func aboutTapped() {
-
+        let navController = UINavigationController(rootViewController: AboutViewController())
+        present(navController, animated: true, completion: nil)
     }
+
 }
 
 extension OcamonsViewController: UITableViewDataSource {
