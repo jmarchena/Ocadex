@@ -17,6 +17,8 @@
 		9746E4EF20339E3F00F651DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4EE20339E3F00F651DE /* Store.swift */; };
 		9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4F1203619EC00F651DE /* OcamonViewController.swift */; };
 		9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9746E4F320361C5F00F651DE /* OcamonViewController.xib */; };
+		97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF62D9203B35660047C247 /* AboutViewController.swift */; };
+		97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97EF62DA203B35660047C247 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9746E4EE20339E3F00F651DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9746E4F1203619EC00F651DE /* OcamonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcamonViewController.swift; sourceTree = "<group>"; };
 		9746E4F320361C5F00F651DE /* OcamonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OcamonViewController.xib; sourceTree = "<group>"; };
+		97EF62D9203B35660047C247 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		97EF62DA203B35660047C247 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			isa = PBXGroup;
 			children = (
 				97399B742032C0EA00D62FE2 /* AppDelegate.swift */,
+				97EF62D9203B35660047C247 /* AboutViewController.swift */,
+				97EF62DA203B35660047C247 /* AboutViewController.xib */,
 				9746E4E620338C1F00F651DE /* Ocamon.swift */,
 				9746E4E820338D9D00F651DE /* OcamonType.swift */,
 				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
@@ -142,6 +148,7 @@
 				9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */,
 				9746E4ED2033929B00F651DE /* OcamonsViewController.xib in Resources */,
 				97399B7C2032C0EA00D62FE2 /* Assets.xcassets in Resources */,
+				97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +162,7 @@
 				9746E4EF20339E3F00F651DE /* Store.swift in Sources */,
 				97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */,
 				9746E4E920338D9D00F651DE /* OcamonType.swift in Sources */,
+				97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */,
 				9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */,
 				9746E4E720338C1F00F651DE /* Ocamon.swift in Sources */,
 				9746E4EB2033900E00F651DE /* OcamonsViewController.swift in Sources */,
