@@ -12,5 +12,15 @@ class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "About"
+        setupNavigationItem()
+    }
+
+    private func setupNavigationItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeTapped))
+    }
+
+    @objc private func closeTapped() {
+        dismiss(animated: true, completion: nil)
     }
 }
