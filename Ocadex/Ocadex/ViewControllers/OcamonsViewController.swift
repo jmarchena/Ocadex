@@ -12,6 +12,8 @@ class OcamonsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var didSelect: (Ocamon) -> () = { _ in }
+
     private var ocamonStore: Store!
 
     private var ocamonList: [Ocamon] = [] {
@@ -81,7 +83,7 @@ extension OcamonsViewController: UITableViewDataSource {
 
 extension OcamonsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ocamonToPush = ocamon(at: indexPath)
-        navigationController?.pushViewController(OcamonViewController(with: ocamonToPush), animated: true)
+        let ocamonSelected = ocamon(at: indexPath)
+        didSelect(ocamonSelected)
     }
 }
