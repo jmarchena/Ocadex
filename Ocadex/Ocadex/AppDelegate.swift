@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let ocamonsVC = OcamonsViewController(store: Store())
         let navigationController = UINavigationController(rootViewController: ocamonsVC)
+        navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         self.window = window
