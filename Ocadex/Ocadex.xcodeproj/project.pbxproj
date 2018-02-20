@@ -70,12 +70,7 @@
 			children = (
 				97EF62DE203C3CF60047C247 /* Application */,
 				97EF62DD203C3CE00047C247 /* Model */,
-				97EF62D9203B35660047C247 /* AboutViewController.swift */,
-				97EF62DA203B35660047C247 /* AboutViewController.xib */,
-				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
-				9746E4F1203619EC00F651DE /* OcamonViewController.swift */,
-				9746E4F320361C5F00F651DE /* OcamonViewController.xib */,
-				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
+				97EF62DF203C3D820047C247 /* ViewControllers */,
 				97399B7B2032C0EA00D62FE2 /* Assets.xcassets */,
 				97399B7D2032C0EA00D62FE2 /* LaunchScreen.storyboard */,
 				97399B802032C0EA00D62FE2 /* Info.plist */,
@@ -99,6 +94,19 @@
 				97399B742032C0EA00D62FE2 /* AppDelegate.swift */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		97EF62DF203C3D820047C247 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				97EF62D9203B35660047C247 /* AboutViewController.swift */,
+				97EF62DA203B35660047C247 /* AboutViewController.xib */,
+				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
+				9746E4F1203619EC00F651DE /* OcamonViewController.swift */,
+				9746E4F320361C5F00F651DE /* OcamonViewController.xib */,
+				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
