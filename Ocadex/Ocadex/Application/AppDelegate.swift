@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ocamonsVC.didSelect = { ocamon in
             navigationController.pushViewController(OcamonViewController(with: ocamon), animated: true)
         }
+        ocamonsVC.didTapAbout = {
+            let navController = UINavigationController(rootViewController: AboutViewController())
+            ocamonsVC.present(navController, animated: true, completion: nil)
+        }
         navigationController.navigationBar.prefersLargeTitles = true
         window.rootViewController = navigationController
         window.makeKeyAndVisible()

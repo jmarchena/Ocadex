@@ -13,6 +13,7 @@ class OcamonsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var didSelect: (Ocamon) -> () = { _ in }
+    var didTapAbout: () -> () = { }
 
     private var ocamonStore: Store!
 
@@ -56,8 +57,7 @@ class OcamonsViewController: UIViewController {
     }
 
     @objc private func aboutTapped() {
-        let navController = UINavigationController(rootViewController: AboutViewController())
-        present(navController, animated: true, completion: nil)
+        didTapAbout()
     }
 
 }
