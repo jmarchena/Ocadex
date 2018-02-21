@@ -12,18 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var ocamonStore: Store?
-    var rootViewController: UINavigationController?
+    var applicationCoordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        self.ocamonStore = Store()
-        self.rootViewController = UINavigationController()
         let coordinator = Coordinator(with: window)
-        coordinator.start()
+
+        self.applicationCoordinator = coordinator
         self.window = window
 
+        coordinator.start()
         return true
     }
 }
