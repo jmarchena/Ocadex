@@ -17,6 +17,7 @@
 		9746E4EF20339E3F00F651DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4EE20339E3F00F651DE /* Store.swift */; };
 		9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4F1203619EC00F651DE /* OcamonViewController.swift */; };
 		9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9746E4F320361C5F00F651DE /* OcamonViewController.xib */; };
+		97AFA76D203D572300036320 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFA76C203D572200036320 /* Coordinator.swift */; };
 		97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF62D9203B35660047C247 /* AboutViewController.swift */; };
 		97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97EF62DA203B35660047C247 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,7 @@
 		9746E4EE20339E3F00F651DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9746E4F1203619EC00F651DE /* OcamonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcamonViewController.swift; sourceTree = "<group>"; };
 		9746E4F320361C5F00F651DE /* OcamonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OcamonViewController.xib; sourceTree = "<group>"; };
+		97AFA76C203D572200036320 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Ocadex/Coordinator/Coordinator.swift; sourceTree = SOURCE_ROOT; };
 		97EF62D9203B35660047C247 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		97EF62DA203B35660047C247 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +70,7 @@
 		97399B732032C0EA00D62FE2 /* Ocadex */ = {
 			isa = PBXGroup;
 			children = (
+				97AFA769203D569800036320 /* Coordinator */,
 				97EF62DE203C3CF60047C247 /* Application */,
 				97EF62DD203C3CE00047C247 /* Model */,
 				97EF62DF203C3D820047C247 /* ViewControllers */,
@@ -76,6 +79,15 @@
 				97399B802032C0EA00D62FE2 /* Info.plist */,
 			);
 			path = Ocadex;
+			sourceTree = "<group>";
+		};
+		97AFA769203D569800036320 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				97AFA76C203D572200036320 /* Coordinator.swift */,
+			);
+			name = Coordinator;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		97EF62DD203C3CE00047C247 /* Model */ = {
@@ -183,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97AFA76D203D572300036320 /* Coordinator.swift in Sources */,
 				9746E4EF20339E3F00F651DE /* Store.swift in Sources */,
 				97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */,
 				9746E4E920338D9D00F651DE /* OcamonType.swift in Sources */,
