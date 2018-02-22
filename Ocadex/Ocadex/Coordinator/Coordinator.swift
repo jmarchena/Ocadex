@@ -15,7 +15,7 @@ final class Coordinator {
     let rootViewController: UINavigationController = UINavigationController()
     lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
 
-    init(with window: UIWindow) {
+    init(using window: UIWindow) {
         self.window = window
     }
 
