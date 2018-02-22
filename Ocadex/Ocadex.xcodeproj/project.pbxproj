@@ -86,8 +86,7 @@
 			children = (
 				97AFA76C203D572200036320 /* Coordinator.swift */,
 			);
-			name = Coordinator;
-			path = "New Group";
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		97EF62DD203C3CE00047C247 /* Model */ = {
