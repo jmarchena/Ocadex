@@ -114,9 +114,9 @@
 				97EF62D9203B35660047C247 /* AboutViewController.swift */,
 				97EF62DA203B35660047C247 /* AboutViewController.xib */,
 				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
+				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
 				9746E4F1203619EC00F651DE /* OcamonViewController.swift */,
 				9746E4F320361C5F00F651DE /* OcamonViewController.xib */,
-				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
