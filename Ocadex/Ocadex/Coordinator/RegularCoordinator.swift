@@ -6,12 +6,9 @@
 //  Copyright © 2018 Jose Marchena. All rights reserved.
 //
 
-import Foundation
-
-
 import UIKit
 
-final class RegularCoordinator {
+final class RegularCoordinator: Coordinator {
 
     let window: UIWindow
     let ocamonStore: Store = Store()
