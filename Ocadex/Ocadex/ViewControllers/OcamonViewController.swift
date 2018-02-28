@@ -10,7 +10,7 @@ import UIKit
 
 class OcamonViewController: UIViewController {
 
-    private var ocamon: Ocamon!
+    private var ocamon: Ocamon
 
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
@@ -34,8 +34,8 @@ class OcamonViewController: UIViewController {
     }
 
     init(with ocamon: Ocamon) {
-        super.init(nibName: nil, bundle: nil)
         self.ocamon = ocamon
+        super.init(nibName: nil, bundle: nil)
     }
 
     override func viewDidLoad() {

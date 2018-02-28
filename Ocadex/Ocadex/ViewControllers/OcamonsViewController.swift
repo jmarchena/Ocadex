@@ -15,7 +15,7 @@ class OcamonsViewController: UIViewController {
     var didSelect: (Ocamon) -> () = { _ in }
     var didTapAbout: () -> () = { }
 
-    private var ocamonStore: Store!
+    private var ocamonStore: Store
 
     private var ocamonList: [Ocamon] = [] {
         didSet {
@@ -26,8 +26,8 @@ class OcamonsViewController: UIViewController {
     static let cellReuseIdentifier: String = "Cell"
 
     init(store: Store) {
-        super.init(nibName: nil, bundle: nil)
         self.ocamonStore = store
+        super.init(nibName: nil, bundle: nil)
         title = "Ocadex"
     }
 

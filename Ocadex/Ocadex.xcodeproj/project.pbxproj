@@ -17,7 +17,10 @@
 		9746E4EF20339E3F00F651DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4EE20339E3F00F651DE /* Store.swift */; };
 		9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4F1203619EC00F651DE /* OcamonViewController.swift */; };
 		9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9746E4F320361C5F00F651DE /* OcamonViewController.xib */; };
+		976570D3203E9C4F005CDA44 /* RegularCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */; };
 		97AFA76D203D572300036320 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFA76C203D572200036320 /* Coordinator.swift */; };
+		97D2E4CE203F7EAC00632AE7 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */; };
+		97D2E4CF203F7EAC00632AE7 /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */; };
 		97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF62D9203B35660047C247 /* AboutViewController.swift */; };
 		97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97EF62DA203B35660047C247 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
@@ -35,7 +38,10 @@
 		9746E4EE20339E3F00F651DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9746E4F1203619EC00F651DE /* OcamonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcamonViewController.swift; sourceTree = "<group>"; };
 		9746E4F320361C5F00F651DE /* OcamonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OcamonViewController.xib; sourceTree = "<group>"; };
+		976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularCoordinator.swift; sourceTree = "<group>"; };
 		97AFA76C203D572200036320 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Ocadex/Coordinator/Coordinator.swift; sourceTree = SOURCE_ROOT; };
+		97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
 		97EF62D9203B35660047C247 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		97EF62DA203B35660047C247 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				97AFA76C203D572200036320 /* Coordinator.swift */,
+				976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -116,6 +123,8 @@
 				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
 				9746E4F1203619EC00F651DE /* OcamonViewController.swift */,
 				9746E4F320361C5F00F651DE /* OcamonViewController.xib */,
+				97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */,
+				97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D2E4CF203F7EAC00632AE7 /* EmptyViewController.xib in Resources */,
 				97399B7F2032C0EA00D62FE2 /* LaunchScreen.storyboard in Resources */,
 				9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */,
 				9746E4ED2033929B00F651DE /* OcamonsViewController.xib in Resources */,
@@ -194,7 +204,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				976570D3203E9C4F005CDA44 /* RegularCoordinator.swift in Sources */,
 				97AFA76D203D572300036320 /* Coordinator.swift in Sources */,
+				97D2E4CE203F7EAC00632AE7 /* EmptyViewController.swift in Sources */,
 				9746E4EF20339E3F00F651DE /* Store.swift in Sources */,
 				97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */,
 				9746E4E920338D9D00F651DE /* OcamonType.swift in Sources */,

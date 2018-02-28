@@ -12,12 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var applicationCoordinator: Coordinator?
+    var applicationCoordinator: RegularCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let coordinator = Coordinator(using: window)
+        let coordinator = RegularCoordinator(using: window)
 
         self.applicationCoordinator = coordinator
         self.window = window
