@@ -12,11 +12,6 @@ class OcamonViewController: UIViewController {
 
     private var ocamon: Ocamon!
 
-    @IBOutlet weak var nameLabel: UILabel! {
-        didSet {
-            nameLabel.text = ocamon.name
-        }
-    }
     @IBOutlet weak var imageView: UIImageView! {
         didSet {
             imageView.image = ocamon.image
@@ -41,6 +36,12 @@ class OcamonViewController: UIViewController {
     init(with ocamon: Ocamon) {
         super.init(nibName: nil, bundle: nil)
         self.ocamon = ocamon
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = ocamon.name
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     required init?(coder aDecoder: NSCoder) {
