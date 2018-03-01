@@ -17,9 +17,20 @@
 		9746E4EF20339E3F00F651DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4EE20339E3F00F651DE /* Store.swift */; };
 		9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4F1203619EC00F651DE /* OcamonViewController.swift */; };
 		9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9746E4F320361C5F00F651DE /* OcamonViewController.xib */; };
+		97D2E4DE2047E25F00632AE7 /* OcadexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */; };
 		97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF62D9203B35660047C247 /* AboutViewController.swift */; };
 		97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97EF62DA203B35660047C247 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		97D2E4E02047E25F00632AE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 97399B692032C0EA00D62FE2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97399B702032C0EA00D62FE2;
+			remoteInfo = Ocadex;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		97399B712032C0EA00D62FE2 /* Ocadex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ocadex.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,12 +45,22 @@
 		9746E4EE20339E3F00F651DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9746E4F1203619EC00F651DE /* OcamonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcamonViewController.swift; sourceTree = "<group>"; };
 		9746E4F320361C5F00F651DE /* OcamonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OcamonViewController.xib; sourceTree = "<group>"; };
+		97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcadexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcadexUITests.swift; sourceTree = "<group>"; };
+		97D2E4DF2047E25F00632AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97EF62D9203B35660047C247 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		97EF62DA203B35660047C247 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		97399B6E2032C0EA00D62FE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D2E4D82047E25F00632AE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				97399B732032C0EA00D62FE2 /* Ocadex */,
+				97D2E4DC2047E25F00632AE7 /* OcadexUITests */,
 				97399B722032C0EA00D62FE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				97399B712032C0EA00D62FE2 /* Ocadex.app */,
+				97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +99,15 @@
 				97399B802032C0EA00D62FE2 /* Info.plist */,
 			);
 			path = Ocadex;
+			sourceTree = "<group>";
+		};
+		97D2E4DC2047E25F00632AE7 /* OcadexUITests */ = {
+			isa = PBXGroup;
+			children = (
+				97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */,
+				97D2E4DF2047E25F00632AE7 /* Info.plist */,
+			);
+			path = OcadexUITests;
 			sourceTree = "<group>";
 		};
 		97EF62DD203C3CE00047C247 /* Model */ = {
@@ -129,6 +161,24 @@
 			productReference = 97399B712032C0EA00D62FE2 /* Ocadex.app */;
 			productType = "com.apple.product-type.application";
 		};
+		97D2E4DA2047E25F00632AE7 /* OcadexUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97D2E4E42047E25F00632AE7 /* Build configuration list for PBXNativeTarget "OcadexUITests" */;
+			buildPhases = (
+				97D2E4D72047E25F00632AE7 /* Sources */,
+				97D2E4D82047E25F00632AE7 /* Frameworks */,
+				97D2E4D92047E25F00632AE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97D2E4E12047E25F00632AE7 /* PBXTargetDependency */,
+			);
+			name = OcadexUITests;
+			productName = OcadexUITests;
+			productReference = 97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -142,6 +192,11 @@
 					97399B702032C0EA00D62FE2 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+					};
+					97D2E4DA2047E25F00632AE7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 97399B702032C0EA00D62FE2;
 					};
 				};
 			};
@@ -159,6 +214,7 @@
 			projectRoot = "";
 			targets = (
 				97399B702032C0EA00D62FE2 /* Ocadex */,
+				97D2E4DA2047E25F00632AE7 /* OcadexUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +229,13 @@
 				9746E4ED2033929B00F651DE /* OcamonsViewController.xib in Resources */,
 				97399B7C2032C0EA00D62FE2 /* Assets.xcassets in Resources */,
 				97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		97D2E4D92047E25F00632AE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +256,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		97D2E4D72047E25F00632AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97D2E4DE2047E25F00632AE7 /* OcadexUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97D2E4E12047E25F00632AE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97399B702032C0EA00D62FE2 /* Ocadex */;
+			targetProxy = 97D2E4E02047E25F00632AE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		97399B7D2032C0EA00D62FE2 /* LaunchScreen.storyboard */ = {
@@ -344,6 +423,36 @@
 			};
 			name = Release;
 		};
+		97D2E4E22047E25F00632AE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTN2RMG78V;
+				INFOPLIST_FILE = OcadexUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ocadex;
+			};
+			name = Debug;
+		};
+		97D2E4E32047E25F00632AE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTN2RMG78V;
+				INFOPLIST_FILE = OcadexUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ocadex;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -361,6 +470,15 @@
 			buildConfigurations = (
 				97399B842032C0EA00D62FE2 /* Debug */,
 				97399B852032C0EA00D62FE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97D2E4E42047E25F00632AE7 /* Build configuration list for PBXNativeTarget "OcadexUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97D2E4E22047E25F00632AE7 /* Debug */,
+				97D2E4E32047E25F00632AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
