@@ -57,7 +57,6 @@ class OcamonsViewController: UIViewController {
         let navController = UINavigationController(rootViewController: AboutViewController())
         present(navController, animated: true, completion: nil)
     }
-
 }
 
 extension OcamonsViewController: UITableViewDataSource {
