@@ -10,17 +10,17 @@ import UIKit
 
 final class RegularCoordinator: Coordinator {
 
-    let window: UIWindow
-    let ocamonStore: Store = Store()
-    let rootViewController: UISplitViewController = UISplitViewController()
-    lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
+    private let window: UIWindow
+    private let ocamonStore: Store = Store()
+    private let rootViewController: UISplitViewController = UISplitViewController()
+    private lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
 
     init(using window: UIWindow) {
         self.window = window
     }
 
     func start() {
-        let masterNavigationController = wrapInNavigationController(ocamonListViewController, prefersLargeTitles: true)
+        let masterNavigationController = ocamonListViewController.wrappedInNavigationController(prefersLargeTitles: true)
         rootViewController.viewControllers = [masterNavigationController, EmptyViewController()]
         rootViewController.preferredDisplayMode = .allVisible
         rootViewController.delegate = self
@@ -36,12 +36,12 @@ final class RegularCoordinator: Coordinator {
 
     private func showOcamon(_ ocamon: Ocamon) {
         removeEmptyViewController()
-        let ocamonNavigationController = wrapInNavigationController(OcamonViewController(with: ocamon), prefersLargeTitles: true)
+        let ocamonNavigationController = OcamonViewController(with: ocamon).wrappedInNavigationController(prefersLargeTitles: true)
         rootViewController.showDetailViewController(ocamonNavigationController, sender: self)
     }
 
     private func showAbout() {
-        let navigationController = wrapInNavigationController(AboutViewController())
+        let navigationController = AboutViewController().wrappedInNavigationController()
         setupPopoverPresentation(for: navigationController)
         rootViewController.present(navigationController, animated: true, completion: nil)
     }
@@ -65,12 +65,6 @@ final class RegularCoordinator: Coordinator {
         navigationController.popoverPresentationController?.sourceView = rootViewController.view
         navigationController.popoverPresentationController?.sourceRect = CGRect(x: rootViewController.view.bounds.midX, y: rootViewController.view.bounds.midY, width: 0, height: 0)
         navigationController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
-    }
-
-    private func wrapInNavigationController(_ viewController: UIViewController, prefersLargeTitles: Bool = false) -> UINavigationController {
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.navigationBar.prefersLargeTitles = prefersLargeTitles
-        return navigationController
     }
 }
 
