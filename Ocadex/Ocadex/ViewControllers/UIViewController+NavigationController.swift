@@ -6,4 +6,12 @@
 //  Copyright © 2018 Jose Marchena. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    func wrappedInNavigationController(prefersLargeTitles: Bool = false) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: self)
+        navigationController.navigationBar.prefersLargeTitles = prefersLargeTitles
+        return navigationController
+    }
+}
