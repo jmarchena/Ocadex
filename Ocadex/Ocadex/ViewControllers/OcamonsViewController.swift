@@ -33,7 +33,6 @@ class OcamonsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationItem()
         setupTableView()
         ocamonList = ocamonStore.loadOcamons()
     }
@@ -48,18 +47,9 @@ class OcamonsViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: OcamonsViewController.cellReuseIdentifier)
     }
 
-    private func setupNavigationItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.aboutTapped))
-    }
-
     private func ocamon(at indexPath: IndexPath) -> Ocamon {
         return ocamonList[indexPath.row]
     }
-
-    @objc private func aboutTapped() {
-        didTapAbout()
-    }
-
 }
 
 extension OcamonsViewController: UITableViewDataSource {
