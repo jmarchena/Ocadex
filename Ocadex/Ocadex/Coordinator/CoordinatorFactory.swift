@@ -11,16 +11,18 @@ import UIKit
 
 struct CoordinatorFactory {
 
-    let window: UIWindow
+    private let window: UIWindow
+    private let animated: Bool
 
-    init(using window: UIWindow) {
+    init(using window: UIWindow, animated: Bool = true) {
         self.window = window
+        self.animated = animated
     }
 
     func makeCoordinator() -> Coordinator {
         if window.traitCollection.horizontalSizeClass == .regular {
             return RegularCoordinator(using: window)
         }
-        return CompactCoordinator(using: window)
+        return CompactCoordinator(using: window, animated: animated)
     }
 }
