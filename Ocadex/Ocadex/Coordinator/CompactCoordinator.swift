@@ -10,30 +10,49 @@ import UIKit
 
 final class CompactCoordinator: Coordinator {
 
-    let window: UIWindow
-    let ocamonStore: Store = Store()
-    let rootViewController: UINavigationController = UINavigationController()
-    lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
+    private let window: UIWindow
+    private let ocamonStore: Store = Store()
+    private let rootViewController: UINavigationController = UINavigationController()
+    private lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
+    private let animated: Bool
 
-    init(using window: UIWindow) {
+    private var aboutViewController: UINavigationController? = nil
+
+    init(using window: UIWindow, animated: Bool = true) {
         self.window = window
+        self.animated = animated
     }
 
     func start() {
-        rootViewController.pushViewController(ocamonListViewController, animated: true)
+        rootViewController.pushViewController(ocamonListViewController, animated: animated)
+        rootViewController.navigationBar.prefersLargeTitles = true
         ocamonListViewController.didSelect = showOcamon
         ocamonListViewController.didTapAbout = showAbout
-        rootViewController.navigationBar.prefersLargeTitles = true
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
 
     private func showOcamon(_ ocamon: Ocamon) {
-        rootViewController.show(OcamonViewController(with: ocamon), sender: self)
+        let ocamonVC = OcamonViewController(with: ocamon)
+        rootViewController.pushViewController(ocamonVC, animated: animated)
     }
 
     private func showAbout() {
-        let navController = UINavigationController(rootViewController: AboutViewController())
-        ocamonListViewController.present(navController, animated: true, completion: nil)
+        aboutViewController = provideAboutViewController()
+        if let wrappedAboutViewController = aboutViewController {
+            ocamonListViewController.present(wrappedAboutViewController, animated: animated, completion: nil)
+        }
+    }
+
+    private func closeAbout() {
+        aboutViewController?.dismiss(animated: animated, completion: nil)
+        aboutViewController?.viewControllers = []
+        aboutViewController = nil
+    }
+
+    private func provideAboutViewController () -> UINavigationController {
+        let aboutViewController = AboutViewController()
+        aboutViewController.didTapClose = closeAbout
+        return aboutViewController.wrappedInNavigationController(prefersLargeTitles: false)
     }
 }
