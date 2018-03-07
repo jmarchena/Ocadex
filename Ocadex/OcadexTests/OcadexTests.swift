@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Ocadex
 
 class OcadexTests: XCTestCase {
     
@@ -19,17 +20,27 @@ class OcadexTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+    func testBasicFlow() {
+        let window = UIWindow()
+        let coordinator: Coordinator = CoordinatorFactory(using: window, animated: false).makeCoordinator()
+        coordinator.start()
+
+        XCTAssert(window.currentlyPresenting is OcamonsViewController)
+
+        let ocamonListVC: OcamonsViewController? = window.currentlyPresenting as? OcamonsViewController
+        ocamonListVC?.didTapAbout()
+
+        XCTAssert(window.currentlyPresenting is AboutViewController)
+
+        let aboutVC: AboutViewController? = window.currentlyPresenting as? AboutViewController
+        aboutVC?.closeTapped()
+
+        XCTAssertEqual(window.currentlyPresenting, ocamonListVC)
+
+        let ocamon = Ocamon(name: "TestOcamon", type: .soviet, info: "some info", image: nil)
+        ocamonListVC?.didSelect(ocamon)
+
+        XCTAssert(window.currentlyPresenting is OcamonViewController)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
