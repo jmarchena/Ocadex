@@ -10,6 +10,8 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
+    var didTapClose: () -> () = { }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "About"
@@ -20,7 +22,7 @@ class AboutViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(self.closeTapped))
     }
 
-    @objc private func closeTapped() {
-        dismiss(animated: true, completion: nil)
+    @objc func closeTapped() {
+        didTapClose()
     }
 }
