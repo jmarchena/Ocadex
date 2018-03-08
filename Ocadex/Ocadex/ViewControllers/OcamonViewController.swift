@@ -43,12 +43,6 @@ class OcamonViewController: UIViewController {
         title = ocamon.name
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = ocamon.name
-        navigationController?.navigationBar.prefersLargeTitles = true
-    }
-
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
