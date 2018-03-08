@@ -85,6 +85,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ZcR-rF-qO0" secondAttribute="trailing" constant="8" id="hCB-S5-lND"/>
                 <constraint firstItem="TNP-rM-xtJ" firstAttribute="leading" secondItem="aYu-Pg-4S0" secondAttribute="leading" id="mzf-5b-94l"/>
                 <constraint firstItem="8U8-CI-Kbt" firstAttribute="leading" secondItem="aYu-Pg-4S0" secondAttribute="leading" id="nEw-14-ha3"/>
+                <constraint firstItem="dga-HQ-yWc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="rft-Aq-ZoV"/>
                 <constraint firstItem="8U8-CI-Kbt" firstAttribute="top" secondItem="J2o-Zx-yrM" secondAttribute="bottom" constant="8" id="zVI-gG-rrg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

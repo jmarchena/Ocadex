@@ -12,7 +12,10 @@ class OcamonsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    private var ocamonStore: Store!
+    var didSelect: (Ocamon) -> () = { _ in }
+    var didTapAbout: () -> () = { }
+
+    private var ocamonStore: Store
 
     private var ocamonList: [Ocamon] = [] {
         didSet {
@@ -23,14 +26,13 @@ class OcamonsViewController: UIViewController {
     static let cellReuseIdentifier: String = "Cell"
 
     init(store: Store) {
-        super.init(nibName: nil, bundle: nil)
         self.ocamonStore = store
+        super.init(nibName: nil, bundle: nil)
         title = "Ocadex"
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationItem()
         setupTableView()
         ocamonList = ocamonStore.loadOcamons()
     }
@@ -45,17 +47,8 @@ class OcamonsViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: OcamonsViewController.cellReuseIdentifier)
     }
 
-    private func setupNavigationItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.aboutTapped))
-    }
-
     private func ocamon(at indexPath: IndexPath) -> Ocamon {
         return ocamonList[indexPath.row]
-    }
-
-    @objc private func aboutTapped() {
-        let navController = UINavigationController(rootViewController: AboutViewController())
-        present(navController, animated: true, completion: nil)
     }
 }
 
@@ -80,7 +73,7 @@ extension OcamonsViewController: UITableViewDataSource {
 
 extension OcamonsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let ocamonToPush = ocamon(at: indexPath)
-        navigationController?.pushViewController(OcamonViewController(with: ocamonToPush), animated: true)
+        let ocamonSelected = ocamon(at: indexPath)
+        didSelect(ocamonSelected)
     }
 }

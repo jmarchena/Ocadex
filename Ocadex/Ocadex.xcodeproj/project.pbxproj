@@ -17,13 +17,21 @@
 		9746E4EF20339E3F00F651DE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4EE20339E3F00F651DE /* Store.swift */; };
 		9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9746E4F1203619EC00F651DE /* OcamonViewController.swift */; };
 		9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9746E4F320361C5F00F651DE /* OcamonViewController.xib */; };
-		97D2E4DE2047E25F00632AE7 /* OcadexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */; };
+		976570D3203E9C4F005CDA44 /* RegularCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */; };
+		97AFA76D203D572300036320 /* CompactCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AFA76C203D572200036320 /* CompactCoordinator.swift */; };
+		97D2E4CE203F7EAC00632AE7 /* EmptyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */; };
+		97D2E4CF203F7EAC00632AE7 /* EmptyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */; };
+		97D2E4D42047103300632AE7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4D32047103300632AE7 /* Coordinator.swift */; };
+		97D2E4D62047108900632AE7 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4D52047108900632AE7 /* CoordinatorFactory.swift */; };
+		97D2E4F22048B8B500632AE7 /* OcadexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4F12048B8B500632AE7 /* OcadexTests.swift */; };
+		97D2E4FA204977F900632AE7 /* UIWindow+PresentationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4F9204977F900632AE7 /* UIWindow+PresentationUtility.swift */; };
+		97D2E4FC204AAB4800632AE7 /* UIViewController+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D2E4FB204AAB4800632AE7 /* UIViewController+NavigationController.swift */; };
 		97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EF62D9203B35660047C247 /* AboutViewController.swift */; };
 		97EF62DC203B35660047C247 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97EF62DA203B35660047C247 /* AboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		97D2E4E02047E25F00632AE7 /* PBXContainerItemProxy */ = {
+		97D2E4F42048B8B600632AE7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 97399B692032C0EA00D62FE2 /* Project object */;
 			proxyType = 1;
@@ -45,9 +53,17 @@
 		9746E4EE20339E3F00F651DE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9746E4F1203619EC00F651DE /* OcamonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcamonViewController.swift; sourceTree = "<group>"; };
 		9746E4F320361C5F00F651DE /* OcamonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OcamonViewController.xib; sourceTree = "<group>"; };
-		97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcadexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcadexUITests.swift; sourceTree = "<group>"; };
-		97D2E4DF2047E25F00632AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularCoordinator.swift; sourceTree = "<group>"; };
+		97AFA76C203D572200036320 /* CompactCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompactCoordinator.swift; path = Ocadex/Coordinator/CompactCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewController.swift; sourceTree = "<group>"; };
+		97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyViewController.xib; sourceTree = "<group>"; };
+		97D2E4D32047103300632AE7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		97D2E4D52047108900632AE7 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		97D2E4EF2048B8B500632AE7 /* OcadexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OcadexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		97D2E4F12048B8B500632AE7 /* OcadexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcadexTests.swift; sourceTree = "<group>"; };
+		97D2E4F32048B8B600632AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97D2E4F9204977F900632AE7 /* UIWindow+PresentationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+PresentationUtility.swift"; sourceTree = "<group>"; };
+		97D2E4FB204AAB4800632AE7 /* UIViewController+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NavigationController.swift"; sourceTree = "<group>"; };
 		97EF62D9203B35660047C247 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		97EF62DA203B35660047C247 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +76,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97D2E4D82047E25F00632AE7 /* Frameworks */ = {
+		97D2E4EC2048B8B500632AE7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				97399B732032C0EA00D62FE2 /* Ocadex */,
-				97D2E4DC2047E25F00632AE7 /* OcadexUITests */,
+				97D2E4F02048B8B500632AE7 /* OcadexTests */,
 				97399B722032C0EA00D62FE2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				97399B712032C0EA00D62FE2 /* Ocadex.app */,
-				97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */,
+				97D2E4EF2048B8B500632AE7 /* OcadexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,6 +107,7 @@
 		97399B732032C0EA00D62FE2 /* Ocadex */ = {
 			isa = PBXGroup;
 			children = (
+				97AFA769203D569800036320 /* Coordinator */,
 				97EF62DE203C3CF60047C247 /* Application */,
 				97EF62DD203C3CE00047C247 /* Model */,
 				97EF62DF203C3D820047C247 /* ViewControllers */,
@@ -101,13 +118,25 @@
 			path = Ocadex;
 			sourceTree = "<group>";
 		};
-		97D2E4DC2047E25F00632AE7 /* OcadexUITests */ = {
+		97AFA769203D569800036320 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				97D2E4DD2047E25F00632AE7 /* OcadexUITests.swift */,
-				97D2E4DF2047E25F00632AE7 /* Info.plist */,
+				97AFA76C203D572200036320 /* CompactCoordinator.swift */,
+				976570D2203E9C4F005CDA44 /* RegularCoordinator.swift */,
+				97D2E4D32047103300632AE7 /* Coordinator.swift */,
+				97D2E4D52047108900632AE7 /* CoordinatorFactory.swift */,
 			);
-			path = OcadexUITests;
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		97D2E4F02048B8B500632AE7 /* OcadexTests */ = {
+			isa = PBXGroup;
+			children = (
+				97D2E4F12048B8B500632AE7 /* OcadexTests.swift */,
+				97D2E4F9204977F900632AE7 /* UIWindow+PresentationUtility.swift */,
+				97D2E4F32048B8B600632AE7 /* Info.plist */,
+			);
+			path = OcadexTests;
 			sourceTree = "<group>";
 		};
 		97EF62DD203C3CE00047C247 /* Model */ = {
@@ -134,9 +163,12 @@
 				97EF62D9203B35660047C247 /* AboutViewController.swift */,
 				97EF62DA203B35660047C247 /* AboutViewController.xib */,
 				9746E4EA2033900E00F651DE /* OcamonsViewController.swift */,
+				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
 				9746E4F1203619EC00F651DE /* OcamonViewController.swift */,
 				9746E4F320361C5F00F651DE /* OcamonViewController.xib */,
-				9746E4EC2033929B00F651DE /* OcamonsViewController.xib */,
+				97D2E4CC203F7EAC00632AE7 /* EmptyViewController.swift */,
+				97D2E4CD203F7EAC00632AE7 /* EmptyViewController.xib */,
+				97D2E4FB204AAB4800632AE7 /* UIViewController+NavigationController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -161,23 +193,23 @@
 			productReference = 97399B712032C0EA00D62FE2 /* Ocadex.app */;
 			productType = "com.apple.product-type.application";
 		};
-		97D2E4DA2047E25F00632AE7 /* OcadexUITests */ = {
+		97D2E4EE2048B8B500632AE7 /* OcadexTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97D2E4E42047E25F00632AE7 /* Build configuration list for PBXNativeTarget "OcadexUITests" */;
+			buildConfigurationList = 97D2E4F82048B8B600632AE7 /* Build configuration list for PBXNativeTarget "OcadexTests" */;
 			buildPhases = (
-				97D2E4D72047E25F00632AE7 /* Sources */,
-				97D2E4D82047E25F00632AE7 /* Frameworks */,
-				97D2E4D92047E25F00632AE7 /* Resources */,
+				97D2E4EB2048B8B500632AE7 /* Sources */,
+				97D2E4EC2048B8B500632AE7 /* Frameworks */,
+				97D2E4ED2048B8B500632AE7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				97D2E4E12047E25F00632AE7 /* PBXTargetDependency */,
+				97D2E4F52048B8B600632AE7 /* PBXTargetDependency */,
 			);
-			name = OcadexUITests;
-			productName = OcadexUITests;
-			productReference = 97D2E4DB2047E25F00632AE7 /* OcadexUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = OcadexTests;
+			productName = OcadexTests;
+			productReference = 97D2E4EF2048B8B500632AE7 /* OcadexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -193,7 +225,7 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
-					97D2E4DA2047E25F00632AE7 = {
+					97D2E4EE2048B8B500632AE7 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 97399B702032C0EA00D62FE2;
@@ -214,7 +246,7 @@
 			projectRoot = "";
 			targets = (
 				97399B702032C0EA00D62FE2 /* Ocadex */,
-				97D2E4DA2047E25F00632AE7 /* OcadexUITests */,
+				97D2E4EE2048B8B500632AE7 /* OcadexTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D2E4CF203F7EAC00632AE7 /* EmptyViewController.xib in Resources */,
 				97399B7F2032C0EA00D62FE2 /* LaunchScreen.storyboard in Resources */,
 				9746E4F420361C5F00F651DE /* OcamonViewController.xib in Resources */,
 				9746E4ED2033929B00F651DE /* OcamonsViewController.xib in Resources */,
@@ -232,7 +265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97D2E4D92047E25F00632AE7 /* Resources */ = {
+		97D2E4ED2048B8B500632AE7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,31 +279,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D2E4FC204AAB4800632AE7 /* UIViewController+NavigationController.swift in Sources */,
+				976570D3203E9C4F005CDA44 /* RegularCoordinator.swift in Sources */,
+				97AFA76D203D572300036320 /* CompactCoordinator.swift in Sources */,
+				97D2E4CE203F7EAC00632AE7 /* EmptyViewController.swift in Sources */,
+				97D2E4D62047108900632AE7 /* CoordinatorFactory.swift in Sources */,
 				9746E4EF20339E3F00F651DE /* Store.swift in Sources */,
 				97399B752032C0EA00D62FE2 /* AppDelegate.swift in Sources */,
 				9746E4E920338D9D00F651DE /* OcamonType.swift in Sources */,
 				97EF62DB203B35660047C247 /* AboutViewController.swift in Sources */,
 				9746E4F2203619EC00F651DE /* OcamonViewController.swift in Sources */,
 				9746E4E720338C1F00F651DE /* Ocamon.swift in Sources */,
+				97D2E4D42047103300632AE7 /* Coordinator.swift in Sources */,
 				9746E4EB2033900E00F651DE /* OcamonsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		97D2E4D72047E25F00632AE7 /* Sources */ = {
+		97D2E4EB2048B8B500632AE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97D2E4DE2047E25F00632AE7 /* OcadexUITests.swift in Sources */,
+				97D2E4FA204977F900632AE7 /* UIWindow+PresentationUtility.swift in Sources */,
+				97D2E4F22048B8B500632AE7 /* OcadexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		97D2E4E12047E25F00632AE7 /* PBXTargetDependency */ = {
+		97D2E4F52048B8B600632AE7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 97399B702032C0EA00D62FE2 /* Ocadex */;
-			targetProxy = 97D2E4E02047E25F00632AE7 /* PBXContainerItemProxy */;
+			targetProxy = 97D2E4F42048B8B600632AE7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -423,33 +463,35 @@
 			};
 			name = Release;
 		};
-		97D2E4E22047E25F00632AE7 /* Debug */ = {
+		97D2E4F62048B8B600632AE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTN2RMG78V;
-				INFOPLIST_FILE = OcadexUITests/Info.plist;
+				INFOPLIST_FILE = OcadexTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Ocadex;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocadex.app/Ocadex";
 			};
 			name = Debug;
 		};
-		97D2E4E32047E25F00632AE7 /* Release */ = {
+		97D2E4F72048B8B600632AE7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTN2RMG78V;
-				INFOPLIST_FILE = OcadexUITests/Info.plist;
+				INFOPLIST_FILE = OcadexTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jmt.OcadexTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Ocadex;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ocadex.app/Ocadex";
 			};
 			name = Release;
 		};
@@ -474,11 +516,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97D2E4E42047E25F00632AE7 /* Build configuration list for PBXNativeTarget "OcadexUITests" */ = {
+		97D2E4F82048B8B600632AE7 /* Build configuration list for PBXNativeTarget "OcadexTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				97D2E4E22047E25F00632AE7 /* Debug */,
-				97D2E4E32047E25F00632AE7 /* Release */,
+				97D2E4F62048B8B600632AE7 /* Debug */,
+				97D2E4F72048B8B600632AE7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

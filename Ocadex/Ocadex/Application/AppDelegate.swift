@@ -12,18 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var applicationCoordinator: Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let ocamonsVC = OcamonsViewController(store: Store())
-        let navigationController = UINavigationController(rootViewController: ocamonsVC)
-        navigationController.navigationBar.prefersLargeTitles = true
-        window.rootViewController = navigationController
-        window.makeKeyAndVisible()
+        let coordinator = CoordinatorFactory(using: window).makeCoordinator()
+
+        self.applicationCoordinator = coordinator
         self.window = window
 
+        coordinator.start()
         return true
     }
-
 }
