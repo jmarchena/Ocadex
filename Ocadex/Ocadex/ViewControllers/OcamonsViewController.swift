@@ -13,7 +13,6 @@ class OcamonsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var didSelect: (Ocamon) -> () = { _ in }
-    var didTapAbout: () -> () = { }
 
     private var ocamonStore: Store
 

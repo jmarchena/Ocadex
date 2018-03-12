@@ -27,7 +27,6 @@ final class CompactCoordinator: Coordinator {
         rootViewController.pushViewController(ocamonListViewController, animated: animated)
         rootViewController.navigationBar.prefersLargeTitles = true
         ocamonListViewController.didSelect = showOcamon
-        ocamonListViewController.didTapAbout = showAbout
         ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()

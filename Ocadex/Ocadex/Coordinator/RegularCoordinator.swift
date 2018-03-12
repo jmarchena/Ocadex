@@ -26,7 +26,6 @@ final class RegularCoordinator: Coordinator {
         rootViewController.delegate = self
 
         ocamonListViewController.didSelect = showOcamon
-        ocamonListViewController.didTapAbout = showAbout
 
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
