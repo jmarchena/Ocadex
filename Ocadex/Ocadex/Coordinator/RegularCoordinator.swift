@@ -14,9 +14,12 @@ final class RegularCoordinator: Coordinator {
     private let ocamonStore: Store = Store()
     private let rootViewController: UISplitViewController = UISplitViewController()
     private lazy var ocamonListViewController: OcamonsViewController = OcamonsViewController(store: ocamonStore)
+    private var aboutViewController: UINavigationController? = nil
+    private let animated: Bool
 
-    init(using window: UIWindow) {
+    init(using window: UIWindow, animated: Bool = true) {
         self.window = window
+        self.animated = animated
     }
 
     func start() {
@@ -26,6 +29,7 @@ final class RegularCoordinator: Coordinator {
         rootViewController.delegate = self
 
         ocamonListViewController.didSelect = showOcamon
+        ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
 
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
@@ -39,10 +43,24 @@ final class RegularCoordinator: Coordinator {
         rootViewController.showDetailViewController(ocamonNavigationController, sender: self)
     }
 
-    private func showAbout() {
-        let navigationController = AboutViewController().wrappedInNavigationController()
-        setupPopoverPresentation(for: navigationController)
-        rootViewController.present(navigationController, animated: true, completion: nil)
+    @objc private func showAbout() {
+        aboutViewController = provideAboutViewController()
+        if let wrappedAboutViewController = aboutViewController {
+            setupPopoverPresentation(for: wrappedAboutViewController)
+            rootViewController.present(wrappedAboutViewController, animated: animated, completion: nil)
+        }
+    }
+
+    private func closeAbout() {
+        aboutViewController?.dismiss(animated: animated, completion: nil)
+        aboutViewController?.viewControllers = []
+        aboutViewController = nil
+    }
+
+    private func provideAboutViewController () -> UINavigationController {
+        let aboutViewController = AboutViewController()
+        aboutViewController.didTapClose = closeAbout
+        return aboutViewController.wrappedInNavigationController(prefersLargeTitles: false)
     }
 
     // MARK: - Helper methods
