@@ -10,31 +10,21 @@ import XCTest
 @testable import Ocadex
 
 class OcadexTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
 
     func testBasicFlow() {
         let window = UIWindow()
-        let coordinator: Coordinator = CoordinatorFactory(using: window, animated: false).makeCoordinator()
+        let coordinator = CompactCoordinator(using: window, animated: false)
         coordinator.start()
 
         XCTAssert(window.currentlyPresenting is OcamonsViewController)
 
         let ocamonListVC: OcamonsViewController? = window.currentlyPresenting as? OcamonsViewController
-        ocamonListVC?.didTapAbout()
+        coordinator.showAbout()
 
         XCTAssert(window.currentlyPresenting is AboutViewController)
 
         let aboutVC: AboutViewController? = window.currentlyPresenting as? AboutViewController
-        aboutVC?.closeTapped()
+        aboutVC?.didTapClose()
 
         XCTAssertEqual(window.currentlyPresenting, ocamonListVC)
 
