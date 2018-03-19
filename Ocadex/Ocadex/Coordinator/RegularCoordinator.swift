@@ -23,14 +23,8 @@ final class RegularCoordinator: Coordinator {
     }
 
     func start() {
-        let masterNavigationController = ocamonListViewController.wrappedInNavigationController(prefersLargeTitles: true)
-        rootViewController.viewControllers = [masterNavigationController, EmptyViewController()]
-        rootViewController.preferredDisplayMode = .allVisible
-        rootViewController.delegate = self
-
-        ocamonListViewController.didSelect = showOcamon
-        ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
-
+        let masterViewController = setupOcamonListViewController()
+        setupRootViewController(with: masterViewController)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
@@ -57,13 +51,25 @@ final class RegularCoordinator: Coordinator {
         aboutViewController = nil
     }
 
+    // MARK: - Helper methods
+
+    private func setupRootViewController(with master: UIViewController) {
+        rootViewController.viewControllers = [master, EmptyViewController()]
+        rootViewController.preferredDisplayMode = .allVisible
+        rootViewController.delegate = self
+    }
+
+    private func setupOcamonListViewController() -> UIViewController {
+        ocamonListViewController.didSelect = showOcamon
+        ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
+        return ocamonListViewController.wrappedInNavigationController(prefersLargeTitles: true)
+    }
+
     private func provideAboutViewController () -> UINavigationController {
         let aboutViewController = AboutViewController()
         aboutViewController.didTapClose = closeAbout
         return aboutViewController.wrappedInNavigationController(prefersLargeTitles: false)
     }
-
-    // MARK: - Helper methods
 
     private func removeEmptyViewController() {
         if let index = indexOfEmptyViewController() {
