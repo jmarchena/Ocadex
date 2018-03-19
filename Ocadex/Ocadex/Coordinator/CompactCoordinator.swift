@@ -37,7 +37,7 @@ final class CompactCoordinator: Coordinator {
         rootViewController.pushViewController(ocamonVC, animated: animated)
     }
 
-    @objc private func showAbout() {
+    @objc func showAbout() {
         aboutViewController = provideAboutViewController()
         if let wrappedAboutViewController = aboutViewController {
             ocamonListViewController.present(wrappedAboutViewController, animated: animated, completion: nil)
@@ -45,9 +45,11 @@ final class CompactCoordinator: Coordinator {
     }
 
     private func closeAbout() {
-        aboutViewController?.dismiss(animated: animated) {
-            self.aboutViewController?.viewControllers = []
-            self.aboutViewController = nil
+        if animated {
+            aboutViewController?.dismiss(animated: animated, completion: removeAboutViewController)
+        } else {
+            aboutViewController?.dismiss(animated: animated, completion: nil)
+            removeAboutViewController()
         }
     }
 
@@ -67,5 +69,10 @@ final class CompactCoordinator: Coordinator {
     private func setupRootViewController() {
         rootViewController.pushViewController(ocamonListViewController, animated: animated)
         rootViewController.navigationBar.prefersLargeTitles = true
+    }
+
+    private func removeAboutViewController() {
+        aboutViewController?.viewControllers = []
+        aboutViewController = nil
     }
 }
