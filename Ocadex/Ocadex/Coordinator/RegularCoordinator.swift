@@ -46,9 +46,10 @@ final class RegularCoordinator: Coordinator {
     }
 
     private func closeAbout() {
-        aboutViewController?.dismiss(animated: animated, completion: nil)
-        aboutViewController?.viewControllers = []
-        aboutViewController = nil
+        aboutViewController?.dismiss(animated: animated) {
+            self.aboutViewController?.viewControllers = []
+            self.aboutViewController = nil
+        }
     }
 
     // MARK: - Helper methods

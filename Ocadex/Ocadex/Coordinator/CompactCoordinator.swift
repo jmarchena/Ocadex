@@ -24,13 +24,13 @@ final class CompactCoordinator: Coordinator {
     }
 
     func start() {
-        rootViewController.pushViewController(ocamonListViewController, animated: animated)
-        rootViewController.navigationBar.prefersLargeTitles = true
-        ocamonListViewController.didSelect = showOcamon
-        ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
+        prepareOcamonListViewController()
+        setupRootViewController()
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }
+
+    // MARK: - Actions
 
     private func showOcamon(_ ocamon: Ocamon) {
         let ocamonVC = OcamonViewController(with: ocamon)
@@ -45,14 +45,27 @@ final class CompactCoordinator: Coordinator {
     }
 
     private func closeAbout() {
-        aboutViewController?.dismiss(animated: animated, completion: nil)
-        aboutViewController?.viewControllers = []
-        aboutViewController = nil
+        aboutViewController?.dismiss(animated: animated) {
+            self.aboutViewController?.viewControllers = []
+            self.aboutViewController = nil
+        }
     }
+
+    // MARK: - Helper methods
 
     private func provideAboutViewController () -> UINavigationController {
         let aboutViewController = AboutViewController()
         aboutViewController.didTapClose = closeAbout
         return aboutViewController.wrappedInNavigationController(prefersLargeTitles: false)
+    }
+
+    private func prepareOcamonListViewController() {
+        ocamonListViewController.didSelect = showOcamon
+        ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
+    }
+
+    private func setupRootViewController() {
+        rootViewController.pushViewController(ocamonListViewController, animated: animated)
+        rootViewController.navigationBar.prefersLargeTitles = true
     }
 }
