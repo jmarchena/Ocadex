@@ -23,7 +23,7 @@ final class RegularCoordinator: Coordinator {
     }
 
     func start() {
-        let masterViewController = setupOcamonListViewController()
+        let masterViewController = prepareOcamonListViewController()
         setupRootViewController(with: masterViewController)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
@@ -59,7 +59,7 @@ final class RegularCoordinator: Coordinator {
         rootViewController.delegate = self
     }
 
-    private func setupOcamonListViewController() -> UIViewController {
+    private func prepareOcamonListViewController() -> UIViewController {
         ocamonListViewController.didSelect = showOcamon
         ocamonListViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "About", style: .plain, target: self, action: #selector(self.showAbout))
         return ocamonListViewController.wrappedInNavigationController(prefersLargeTitles: true)
